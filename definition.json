@@ -7,7 +7,7 @@
           "type": "String"
       },
       "connections_servicebus_externalid": {
-          "defaultValue": "/subscriptions/ff10cf98-f0a8-40fe-bb0f-8bb173923e31/resourceGroups/rg-logicApp/providers/Microsoft.Web/connections/servicebus",
+          "defaultValue": "/subscriptions/***********e31/resourceGroups/rg-logicApp/providers/Microsoft.Web/connections/servicebus",
           "type": "String"
       }
   },
