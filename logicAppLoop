@@ -1,0 +1,20 @@
+$counter=0
+$name=0
+$Location="westus"
+$ResourceGroupName="rg-LogicApp"
+
+
+do
+{
+    $m=Get-AzLogicApp -ResourceGroupName "rg-logicapp" -Name "logicapp$name"
+    if ($null -eq $m){
+   
+    New-AzLogicApp -ResourceGroupName $ResourceGroupName -Name "logicapp$name" -Location $Location -State "Enabled" -DefinitionFilePath "C:\a\definition.json"
+$counter++
+$name++
+    }
+else{
+    Write-Output "logic app already exists"
+    return 1
+}
+} until ($counter -eq 2)
